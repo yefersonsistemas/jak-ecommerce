@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import {StatusBar} from 'react-native';
 import { Ionicons, FontAwesome5 } from '@expo/vector-icons'; 
@@ -12,8 +11,8 @@ import {
 } from '@react-navigation/drawer';
 
 
-import MainScreen from './MainScreen';
-import DetailScreen from './DetailScreen';
+import MainScreen from './Screens/MainScreen';
+import DetailScreen from './Screens/DetailScreen';
 
 
 
@@ -30,25 +29,21 @@ const Drawer = createDrawerNavigator();
 /*****************************************/
 /* INICIO DE DECLARACION DE MANEJADORES */
 /***************************************/
-=======
 import * as React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 
-import Home from './MainScreen'
-import Detail from './DetailScreen'
+import Home from './Screen/MainScreen'
+import Detail from './Screen/DetailScreen'
 
 const Drawer = createDrawerNavigator()
->>>>>>> 6b4495228d7df0d7a965b10880e2a1a3eaee5fe8
 
 function MainStackNavigator() {
   return (
     <NavigationContainer>
-<<<<<<< HEAD
       <StatusBar hidden={false} backgroundColor={'white'} barStyle={'dark-content'}/>  
-      <Drawer.Navigator initialRouteName='Home' drawerContentOptions={{activeTintColor: '#1aafffdd',
-  }}>
+      <Drawer.Navigator initialRouteName='Home' drawerContentOptions={{activeTintColor: '#1aafffdd'}}>
         <Drawer.Screen 
             name='Home'
             component={MainScreen}
@@ -105,11 +100,6 @@ function MainStackNavigator() {
                 drawerIcon:()=>{return <FontAwesome5 name="cog" size={25} color="rgb(30,45,60)"/>},
               })}
         />
-=======
-      <Drawer.Navigator initialRouteName='Home' screenOptions={{gestureEnabled: true}}>
-        <Drawer.Screen name='Home' component={Home}/>
-        <Drawer.Screen name='Detail' component={Detail}/>
->>>>>>> 6b4495228d7df0d7a965b10880e2a1a3eaee5fe8
       </Drawer.Navigator>
     </NavigationContainer>
   )
