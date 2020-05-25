@@ -14,7 +14,8 @@ import {
 const ViewPerfil = Styled.View`
     padding:2% 10%;
     backgroundColor:rgb(250,250,250);
-    height:120px;
+    height:80px;
+    marginBottom:5%;
 `;
 
 /*****************************************/
