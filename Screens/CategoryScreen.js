@@ -6,11 +6,11 @@ export default function App(props) {
   return (
     <View style={styles.container}>
       <Text>Detail Screnn</Text>
-    <TouchableOpacity
-      style={styles.buttonContainer}
-      onPress={() => navigation.navigate('Home')}>
-      <Text style={styles.buttonText}>Go to Home Screen</Text>
-    </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.buttonContainer}
+        onPress={() => navigation.navigate('Home')}>
+        <Text style={styles.buttonText}>Go to Home Screen</Text>
+      </TouchableOpacity>
     </View>
   );
 }

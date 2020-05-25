@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Dispatcher from './Dispatcher'
+import Dispatcher from './NavigatorControl'
 
 /*
 npm install @react-navigation/native @react-navigation/stack @react-navigation/drawer --save

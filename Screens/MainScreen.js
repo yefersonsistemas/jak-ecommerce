@@ -8,11 +8,7 @@ export default function App(props) {
       <Text>Home</Text>
       <TouchableOpacity
         style={styles.buttonContainer}
-<<<<<<< HEAD
         onPress={() => navigation.navigate('Category')}>
-=======
-        onPress={() => navigation.navigate('Detail')}>
->>>>>>> 6b4495228d7df0d7a965b10880e2a1a3eaee5fe8
         <Text style={styles.buttonText}>Go to Detail Screen</Text>
       </TouchableOpacity>
     </View>
