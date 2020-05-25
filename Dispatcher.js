@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import {StatusBar} from 'react-native';
 import { Ionicons, FontAwesome5 } from '@expo/vector-icons'; 
@@ -29,10 +30,22 @@ const Drawer = createDrawerNavigator();
 /*****************************************/
 /* INICIO DE DECLARACION DE MANEJADORES */
 /***************************************/
+=======
+import * as React from 'react'
+import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
+import { createDrawerNavigator } from '@react-navigation/drawer'
+
+import Home from './MainScreen'
+import Detail from './DetailScreen'
+
+const Drawer = createDrawerNavigator()
+>>>>>>> 6b4495228d7df0d7a965b10880e2a1a3eaee5fe8
 
 function MainStackNavigator() {
   return (
     <NavigationContainer>
+<<<<<<< HEAD
       <StatusBar hidden={false} backgroundColor={'white'} barStyle={'dark-content'}/>  
       <Drawer.Navigator initialRouteName='Home' drawerContentOptions={{activeTintColor: '#1aafffdd',
   }}>
@@ -92,6 +105,11 @@ function MainStackNavigator() {
                 drawerIcon:()=>{return <FontAwesome5 name="cog" size={25} color="rgb(30,45,60)"/>},
               })}
         />
+=======
+      <Drawer.Navigator initialRouteName='Home' screenOptions={{gestureEnabled: true}}>
+        <Drawer.Screen name='Home' component={Home}/>
+        <Drawer.Screen name='Detail' component={Detail}/>
+>>>>>>> 6b4495228d7df0d7a965b10880e2a1a3eaee5fe8
       </Drawer.Navigator>
     </NavigationContainer>
   )
