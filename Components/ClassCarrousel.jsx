@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import { View, Image, ScrollView,Dimensions  } from 'react-native';
 import { Fontisto } from '@expo/vector-icons'; 
 import Styled from 'styled-components/native';
@@ -35,8 +35,8 @@ const ViewIndexItem = Styled.View`
     backgroundColor:#fff;
 `
 
-export default class ClassCarrousel extends Component {
-    scrollRef = React.scrollRef();
+export default class ClassCarrousel extends React.Component {
+    scrollRef = React.createRef();
 
     constructor(props){
         super(props)
