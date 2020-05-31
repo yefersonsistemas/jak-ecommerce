@@ -1,4 +1,15 @@
-import React from 'react'
+//Import React
+import React from 'react';
+
+//Import Navigators from React Navigation
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+
+//Import all the screens needed
+import SplashScreen from './Screens/SplashScreen';
+import LoginScreen from './Screens/LoginScreen';
+import RegisterScreen from './Screens/RegisterScreen';
+import DrawerNavigationRoutes from './Screens/DrawerNavigationRoutes';
 
 import Dispatcher from './NavigatorControl'
 
