@@ -1,29 +1,27 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity  } from 'react-native';
-import { Fontisto } from '@expo/vector-icons'; 
+import { TouchableOpacity } from 'react-native';
+import { Ionicons } from '@expo/vector-icons'; 
 import Styled from 'styled-components/native';
+import AsyncImage from './AsyncImage';
 
 const ViewItemBox = Styled.View`
-    padding:0 0 1% 0;
-    borderWidth:1px;
-    borderColor:rgb(235,235,235);
+    padding:0;
     borderRadius:3px;
-    justifyContent: center;
-    alignItems:center;
     width:48%;
     minHeight:150px;
     margin:1% 1%;
-    elevation:4;
+    borderWidth:1px;
+    borderColor:darkgray;
 `;
 
 const ViewItemDetailBox = Styled.View`
     width:100%;
     padding:2% 0 2% 4%;
+    elevation:1;
 `
-const ImageItem = Styled.Image`
+const ImageItem = Styled(AsyncImage)`
     width:100%;
     height:150px;
-    resizeMode: stretch;
 `
 
 const TextTitleItem = Styled.Text`
@@ -40,21 +38,26 @@ const TextPriceItem = Styled.Text`
 
 const TextFavouriteItem = Styled.Text`
     marginTop:2%;
-    fontSize:12px;
+    fontSize:13px;
     color:gray;
 `
 
 export default class ClassItem extends Component {
+    
     render(){
+        const item = this.props.data;
         return (<ViewItemBox>
-                 <ImageItem source={require("../assets/item.png")}/>
+                <TouchableOpacity onPress={this.props.onPress}>
+                 <ImageItem source={{uri: item.image[0]}} placeholderColor='#ccc'/>
                  <ViewItemDetailBox>
-                    <TextTitleItem>{this.props.title}</TextTitleItem>
-                    <TextPriceItem>{this.props.price}</TextPriceItem>
+                    <TextTitleItem>{item.name}</TextTitleItem>
+                    <TextPriceItem>${item.price}</TextPriceItem>
                     <TextFavouriteItem>
-                      <Fontisto name="star" size={14} color="#069671"/> {this.props.fav}
+                      <Ionicons name="ios-star" size={15} color="#069671"/> {item.valoration}
                     </TextFavouriteItem>
                  </ViewItemDetailBox>
-                </ViewItemBox>);
+                </TouchableOpacity>
+                </ViewItemBox>
+                );
     }
 }

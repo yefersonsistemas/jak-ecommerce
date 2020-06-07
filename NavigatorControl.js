@@ -1,8 +1,8 @@
 import React from 'react';
-import { StatusBar, Image } from 'react-native';
+import { StatusBar, Image, TouchableOpacity } from 'react-native';
 import Styled from 'styled-components/native';
 import { Ionicons, FontAwesome5 } from '@expo/vector-icons'; 
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, NavigationContext } from '@react-navigation/native';
 //import { createStackNavigator } from '@react-navigation/stack';
 import {
   createDrawerNavigator,
@@ -17,6 +17,7 @@ const ViewPerfil = Styled.View`
     height:80px;
     marginBottom:5%;
 `;
+
 
 /*****************************************/
 /*            CARGA DE SCREENS          */
@@ -46,7 +47,8 @@ function CustomDrawerContent(props) {
 function MainStackNavigator() {
   return (
     <NavigationContainer>
-      <StatusBar hidden={false} backgroundColor={'white'} barStyle={'dark-content'}/> 
+      <StatusBar hidden={false} backgroundColor={'darkgray'} barStyle={'light-content'}/>
+
       <Drawer.Navigator initialRouteName='Home' drawerContentOptions={{activeTintColor: '#1aafffdd'}}
                                                 drawerContent={props => <CustomDrawerContent {...props} />}>
         <Drawer.Screen 
@@ -54,7 +56,7 @@ function MainStackNavigator() {
             component={MainScreen}
             options={({ navigation }) => ({
                 title: 'Inicio',
-                drawerIcon:()=>{return <Ionicons name="ios-home" size={28} color="rgb(30,45,60)"/>},
+                drawerIcon:()=><Ionicons name="ios-home" size={28} color="rgb(30,45,60)"/>,
               })}
         />
         <Drawer.Screen 
@@ -62,7 +64,7 @@ function MainStackNavigator() {
             component={CategoryScreen}
             options={({ navigation }) => ({
                 title: 'Categorias',
-                drawerIcon:()=>{return <Ionicons name="ios-list-box" size={26} color="rgb(30,45,60)"/>},
+                drawerIcon:()=><Ionicons name="ios-list-box" size={26} color="rgb(30,45,60)"/>,
               })}
         />
         <Drawer.Screen 
@@ -70,7 +72,7 @@ function MainStackNavigator() {
             component={CategoryScreen}
             options={({ navigation }) => ({
                 title: 'Mis Favoritos',
-                drawerIcon:()=>{return <Ionicons name="ios-heart" size={28} color="rgb(30,45,60)"/>},
+                drawerIcon:()=><Ionicons name="ios-heart" size={28} color="rgb(30,45,60)"/>,
               })}
         />
         <Drawer.Screen 
@@ -78,7 +80,7 @@ function MainStackNavigator() {
             component={CategoryScreen}
             options={({ navigation }) => ({
                 title: 'Mi Carrito',
-                drawerIcon:()=>{return <Ionicons name="ios-cart" size={28} color="rgb(30,45,60)"/>},
+                drawerIcon:()=><Ionicons name="ios-cart" size={28} color="rgb(30,45,60)"/>,
               })}
         />
         <Drawer.Screen 
@@ -86,7 +88,7 @@ function MainStackNavigator() {
             component={CategoryScreen}
             options={({ navigation }) => ({
                 title: 'Mi Carrito',
-                drawerIcon:()=>{return <FontAwesome5 name="clipboard-list" size={27} color="rgb(30,45,60)"/>},
+                drawerIcon:()=><FontAwesome5 name="clipboard-list" size={27} color="rgb(30,45,60)"/>,
               })}
         />
         <Drawer.Screen 
@@ -94,7 +96,7 @@ function MainStackNavigator() {
             component={CategoryScreen}
             options={({ navigation }) => ({
                 title: 'Mi Direccion',
-                drawerIcon:()=>{return <FontAwesome5 name="map-marker-alt" size={27} color="rgb(30,45,60)"/>},
+                drawerIcon:()=><FontAwesome5 name="map-marker-alt" size={27} color="rgb(30,45,60)"/>,
               })}
         />
         <Drawer.Screen 
@@ -102,7 +104,7 @@ function MainStackNavigator() {
             component={CategoryScreen}
             options={({ navigation }) => ({
                 title: 'Configuración',
-                drawerIcon:()=>{return <FontAwesome5 name="cog" size={25} color="rgb(30,45,60)"/>},
+                drawerIcon:()=><FontAwesome5 name="cog" size={25} color="rgb(30,45,60)"/>,
               })}
         />
       </Drawer.Navigator>
