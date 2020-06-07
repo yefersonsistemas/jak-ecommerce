@@ -1,14 +1,12 @@
 import React from 'react';
-import { StatusBar, Image, TouchableOpacity } from 'react-native';
+import { StatusBar, Image } from 'react-native';
 import Styled from 'styled-components/native';
 import { Ionicons, FontAwesome5 } from '@expo/vector-icons'; 
-import { NavigationContainer, NavigationContext } from '@react-navigation/native';
-//import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
 import {
   createDrawerNavigator,
   DrawerContentScrollView,
   DrawerItemList,
-  DrawerItem,
 } from '@react-navigation/drawer';
 
 const ViewPerfil = Styled.View`
@@ -87,7 +85,7 @@ function MainStackNavigator() {
             name='Order' 
             component={CategoryScreen}
             options={({ navigation }) => ({
-                title: 'Mi Carrito',
+                title: 'Mis Ordenes',
                 drawerIcon:()=><FontAwesome5 name="clipboard-list" size={27} color="rgb(30,45,60)"/>,
               })}
         />

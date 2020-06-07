@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+import { StackActions } from '@react-navigation/native';
 
 
 const Datastore = {
@@ -67,7 +68,7 @@ export default class SplashScreen extends React.Component {
     const data = await this.performTimeConsumingTask();
 
     if (data !== null) {
-      this.props.navigation.navigate('main', {store:Datastore});
+      this.props.navigation.dispatch(StackActions.replace('main', {store:Datastore}));
     }
   }
 

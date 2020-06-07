@@ -2,26 +2,31 @@ import React, { Component } from 'react';
 import { TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; 
 import Styled from 'styled-components/native';
-import AsyncImage from './AsyncImage';
+import { AsyncImage } from './AsyncImage';
 
 const ViewItemBox = Styled.View`
     padding:0;
-    borderRadius:3px;
     width:48%;
     minHeight:150px;
     margin:1% 1%;
     borderWidth:1px;
-    borderColor:darkgray;
+    borderColor:#eee;
+    borderRadius:5px;
+    elevation:4;
 `;
 
 const ViewItemDetailBox = Styled.View`
     width:100%;
     padding:2% 0 2% 4%;
-    elevation:1;
+    backgroundColor:#fff;
+    borderBottomLeftRadius:5px;
+    borderBottomRightRadius:5px;
 `
 const ImageItem = Styled(AsyncImage)`
     width:100%;
     height:150px;
+    borderTopLeftRadius:5px;
+    borderTopRightRadius:5px;
 `
 
 const TextTitleItem = Styled.Text`

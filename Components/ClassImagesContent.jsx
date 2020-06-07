@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ScrollView, Dimensions } from 'react-native';
 import Styled from 'styled-components/native';
-import AsyncImage from './AsyncImage';
+import { AsyncImage } from './AsyncImage';
 
 const DEVICE_WIDTH = Dimensions.get('window').width;
 const DEVICE_HEIGHT = Dimensions.get('window').height;

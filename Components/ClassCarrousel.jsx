@@ -1,13 +1,14 @@
 import * as React from 'react';
 import { ScrollView,Dimensions  } from 'react-native';
 import Styled from 'styled-components/native';
-import AsyncImage from './AsyncImage';
+import { AsyncImage } from './AsyncImage';
 
+const DEVICE_HEIGHT = Dimensions.get('window').height;
 const DEVICE_WIDTH = Dimensions.get('window').width;
 
 const ViewCarrousel = Styled.View`
     width:100%;
-    height:220px;
+    height:${DEVICE_HEIGHT*0.3}px;
     marginBottom:10px;
 `
 
@@ -79,7 +80,7 @@ export default class ClassCarrousel extends React.Component {
 
         return (
             <ViewCarrousel>
-             <ScrollView 
+             <ScrollView
                 showsVerticalScrollIndicator={false}
                 horizontal 
                 pagingEnabled 
